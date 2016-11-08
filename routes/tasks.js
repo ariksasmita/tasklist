@@ -75,7 +75,7 @@ router.put('/task/:id', function(req, res, next) {
     if(!updTask){
         response.status(400);
         res,json({
-            'error': 'Bad data';
+            'error': 'Bad data'
         });
     } else {
         db.tasks.update({_id: mongojs.ObjectId(req.params.id)}, updTask, {}, function(err, task){
